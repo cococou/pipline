@@ -1,0 +1,70 @@
+########soft path#######
+Soft_dir test
+Script_dir test
+Backup_dir test
+#Bigdata_dir test
+########versions of modules and pipline#####
+Pip   v2.0
+Ref b37
+#Prio -900
+
+#script
+map     v1.0
+indel v1.1
+indel_nocontrol v1.2
+qc      v1.0
+freq	v1.2
+freq_nocontrol	v1.0
+report  v1.16
+report_nocontrol v1.11
+cnv	v1.6	
+cnv_nocontrol	v1.5
+fusion  v1.4
+fusion_nocontrol v1.4
+
+#threshold_start
+map_th 15
+indel_th 1
+indel_nocontrol_th 1
+qc_th 8
+freq_th 1
+freq_nocontrol_th 1
+snp_th 1
+report_th 1
+cnv_th 1
+cnv_nocontrol_th 1
+fusion_th 1
+fusion_nocontrol_th 1
+report_th 1
+report_nocontrol_th 1
+#stepParallel_start
+#:map wait both
+#:indel parallel tumor
+:cnv wait tumor
+#:freq wait tumor
+#:freq_nocontrol wait tumor
+#:cnv_nocontrol wait tumor
+#:indel_nocontrol wait tumor
+#:fusion_nocontrol wait tumor
+#:fusion wait tumor
+#:report wait tumor
+#:qc parallel both
+#:report_nocontrol wait tumor
+#:report wait tumor
+########thershold of modules########
+Thread  1
+##########running way#########
+Run_way monitor
+#Tumor ID
+#Normal ID
+Update no
+QcReport no
+Search_sample no
+##########node##############
+Node    test
+
+#########Outputdir#############
+Outdir  /test
+#Outdir /test
+Indir   /test
+#
